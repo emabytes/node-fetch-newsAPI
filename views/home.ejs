@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tech News</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <h1>NEWS</h1>
+    <section>
+        <% apiData.forEach(elt => {%>
+        <article>
+            <h3>
+                <%= elt.title %>
+            </h3>
+            <img src="<%= elt.urlToImage %>" alt=""></img>
+            <p>
+                <%= elt.description %>
+            </p>
+            <div class="flex">
+                <h4>
+                    <%= elt.author %>
+                </h4>
+                <a href="<%= elt.url %>">READ MORE</a>
+            </div>
+        </article>
+        <%})%>
+    </section>
+</body>
+
+</html>
